@@ -21,7 +21,7 @@ The goals are:
 
 ### 8.2.1. Sobolev Spaces $H^s(\mathbb{R}^3)$
 
-$$ H^s(\mathbb{R}^3) = \left\{ f : (1+|\xi|^2)^{s/2}\hat{f}(\xi)\in L^2 \right\}. $$
+$$ H^s(\mathbb{R}^3) = \left\lbrace f : (1+|\xi|^2)^{s/2}\hat{f}(\xi)\in L^2 \right\rbrace. $$
 
 Used for:
 * basic regularity of $v$ and $\omega$  

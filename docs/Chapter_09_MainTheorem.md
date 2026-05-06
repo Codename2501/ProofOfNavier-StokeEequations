@@ -42,7 +42,7 @@ These three quantities form the position–scale–time confinement structure of
 ## 9.3. Critical Scale and Blow-up Localization
 **Definition 9.1 (Critical Scale).**
 
-$$ \ell_c(t) = \inf \{ \ell > 0 : M(t,\ell) \ge M_c \} $$
+$$ \ell_c(t) = \inf \lbrace \ell > 0 : M(t,\ell) \ge M_c \rbrace $$
 
 Any potential singularity must occur at a finite, nonzero scale $\ell \approx \ell_c(t)$. Thus, blow-up cannot originate from arbitrarily small scales.
 
@@ -52,16 +52,16 @@ Any potential singularity must occur at a finite, nonzero scale $\ell \approx \e
 **Lemma 9.1 (Finite Blow-up Candidates).**
 For each time $t$, the set
 
-$$ \{x_0 : M(t, \ell_c(t)) \ge M_c\} $$
+$$ \lbrace x_0 : M(t, \ell_c(t)) \ge M_c \rbrace $$
 
 contains only finitely many points.
 
 *Sketch.*  
 If infinitely many disjoint balls of radius $\ell_c(t)$ contained critical vorticity concentration, then by bounded overlap (Vitali/Besicovitch covering), the total $L^2$ vorticity energy would diverge:
 
-$$ \|\omega(t)\|_{L^2}^2 \gtrsim \sum_k \ell_c(t)^3 M_c = \infty, $$
+$$ \Vert \omega(t) \Vert_{L^2}^2 \gtrsim \sum_k \ell_c(t)^3 M_c = \infty, $$
 
-contradicting conservation of $\|\omega(t)\|_{L^2}$. Thus blow-up cannot occur at infinitely many spatial locations.
+contradicting conservation of $\Vert \omega(t) \Vert_{L^2}$. Thus blow-up cannot occur at infinitely many spatial locations.
 
 ---
 
@@ -145,7 +145,7 @@ More precisely:
 
 Therefore,
 
-$$ \sup_{t<T} \|\omega(t)\|_{L^\infty} < \infty. $$
+$$ \sup_{t < T} \Vert \omega(t) \Vert_{L^\infty} < \infty. $$
 
 Thus the vorticity remains bounded for all time, and the solution remains globally smooth.
 
