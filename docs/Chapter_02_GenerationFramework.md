@@ -1,146 +1,131 @@
-# Chapter 02 — The Generative Framework  
-OS-atm, OS-dir, and Coordinate Generation Φ
-
-This chapter establishes the foundational generative objects of OS Geometry.
-The entire geometric, differential, and analytic structure of the theory
-is generated from three primitive layers:
-
-1. **OS-atm** — the directionless atomic state  
-2. **OS-dir** — direction-generated atoms  
-3. **Φ** — the coordinate generation map
-
-These layers form the minimal closed system from which all subsequent
-structures (OS-derivative, OS-tensor, OS-metric, OS-Laplacian, OSG2ADV)
-are generated.
+# Chapter 02 — Generative Framework (OS‑atm / OS‑dir / $\Phi$)
+### The Foundational Generative Layers of OS Geometry
 
 ---
 
-## 2.1. OS-atm: The Directionless Atomic State
+## 2.1. Overview
+OS Geometry is built on a three-layer generative hierarchy:
 
-OS-atm represents the most primitive generative object in OS Geometry.
-It is not a point in a pre-existing space; rather, it is the *pre-spatial*
-unit from which direction, scale, and coordinates are generated.
+*   **OS‑atm** — atomic, directionless generative layer
+*   **OS‑dir** — directional generative layer
+*   **$\Phi$** — coordinate-generating map
 
-### **Axiom A1 (Existence of OS-atm).**  
-For every location label $x$, there exists a unique atomic state  
+These layers form the minimal structure required to generate:
+*   direction
+*   metric
+*   connection
+*   Laplacian
+*   and ultimately the OSG2ADV (Navier–Stokes) dynamics
 
-$$ \mathrm{atm}(x), $$
-
-which carries no directional, metric, or coordinate structure.
-
-### **Axiom A2 (Local Uniqueness).**  
-For any two labels $x \neq y$,  
-
-$$ \mathrm{atm}(x) \neq \mathrm{atm}(y). $$
-
-Thus OS-atm forms a locally unique generative substrate.
-
-### **Axiom A3 (No Direction, No Scale).**  
-OS-atm possesses no intrinsic direction, magnitude, or coordinate value:
-
-$$ \mathrm{atm}(x) \text{ has no directional or metric attributes.} $$
-
-OS-atm is therefore a *zero before direction* — a generative zero.
+This chapter formalizes these layers and establishes their structural roles.
 
 ---
 
-## 2.2. OS-dir: Direction-Generated Atoms
+## 2.2. OS‑atm: The Atomic Generative Layer
 
-OS-dir is the first layer in which direction appears.  
-It is generated from OS-atm by assigning a direction label.
+**Definition 2.1 (OS‑atm)**
+OS‑atm is the directionless atomic state. It possesses:
+*   no direction
+*   no magnitude
+*   no coordinate value
+*   no geometric structure
 
-### **Definition 2.1 (OS-dir).**  
-For each atomic state $\mathrm{atm}(x)$, define the direction-generated atom
+Formally, OS‑atm is a zero‑information generative unit from which all higher structures are produced.
+$$ \text{OS-atm} = \text{minimal generative atom}. $$
 
-$$ \mathrm{dir}(x) \in S^2, $$
-
-where $S^2$ is the unit sphere of directions.
-
-### **Axiom D1 (Direction Generation).**  
-OS-dir is generated from OS-atm via a direction assignment:
-
-$$ \mathrm{dir}(x) = f(\mathrm{atm}(x)), $$
-
-where $f$ produces a unit direction.
-
-### **Axiom D2 (Unit Magnitude / Zero Energy).**  
-OS-dir carries direction but no magnitude:
-
-$$ \|\mathrm{dir}(x)\| = 1, \qquad E(\mathrm{dir}(x)) = 0. $$
-
-### **Axiom D3 (Directional Space Preservation).**  
-Under time evolution,
-
-$$ \mathrm{dir}(x,t) \in S^2 $$
-
-for all $t$.  
-The directional space is preserved even though the direction may rotate.
-
-OS-dir is therefore a *zero with direction* — a directional zero.
+*Interpretation*  
+OS‑atm represents the raw substrate of OS Geometry. It is not a point in $\mathbb{R}^3$; it is the pre‑geometric atom from which direction and coordinates are generated.
 
 ---
 
-## 2.3. Coordinate Generation via Φ
+## 2.3. OS‑dir: The Directional Generative Layer
 
-Once direction exists, coordinates can be generated.  
-The coordinate map Φ assigns to each OS-dir a vector in $\mathbb{R}^n$.
+**Definition 2.2 (OS‑dir)**
+OS‑dir is a zero‑dimensional generative layer that produces a unit direction. It satisfies:
+*   OS‑dir has no magnitude
+*   OS‑dir has no energy
+*   OS‑dir is not a vector
+*   OS‑dir generates a direction through $\Phi$
 
-### **Definition 2.2 (Coordinate Map Φ).**  
-Define
+Formally, OS‑dir is a generative state whose output is:
+$$ \hat{d} \in S^2. $$
 
-$$ \Phi : O \to \mathbb{R}^n, $$
+*Interpretation*  
+OS‑dir is best understood as a direction generator, not a geometric object. It is the layer where:
+*   stretching
+*   rotation
+*   dissipation-induced anisotropy
 
-where $O$ is the set of OS-dir objects.
-
-### **Axiom Φ1 (Compatibility with OS-dir).**  
-For each $x$,
-
-$$ \Phi(\mathrm{dir}(x)) = e_i $$
-
-for some basis vector $e_i$ of $\mathbb{R}^n$.
-
-Thus OS-dir generates the coordinate axes.
-
-### **Axiom Φ2 (Rotation Compatibility).**  
-For any rotation $R \in SO(n)$,
-
-$$ \Phi(R \cdot \mathrm{dir}(x)) = R \Phi(\mathrm{dir}(x)). $$
-
-### **Axiom Φ3 (Minimality).**  
-Φ introduces no additional structure beyond what is generated by OS-dir.
+are ultimately recorded. OS‑dir acts as the directional reservoir of OS Geometry: energy dissipated at the metric level reappears as directional distortion.
 
 ---
 
-## 2.4. Closure of the Generative Layer
+## 2.4. $\Phi$: The Coordinate‑Generating Map
 
-The triple  
+**Definition 2.3 (Coordinate Map $\Phi$)**
+$\Phi$ is the generative map that assigns coordinates and geometric structure to OS‑dir:
+$$ \Phi : \text{OS-dir} \longrightarrow \mathbb{R}^3. $$
 
-$$ (\mathrm{OS\text{-}atm},\ \mathrm{OS\text{-}dir},\ \Phi) $$
+$\Phi$ produces:
+*   a coordinate frame
+*   a unit direction
+*   the seed of the OS‑metric
 
-forms a **minimal closed generative system**:
+Thus $\Phi$ is the bridge between the pre‑geometric layers (OS‑atm, OS‑dir) and the geometric layers (metric, connection, Laplacian).
 
-- OS-atm generates OS-dir  
-- OS-dir generates coordinates via Φ  
-- Φ enables the construction of OS-derivative  
-- OS-derivative generates OS-tensor  
-- OS-tensor generates OS Geometry (metric, connection, Laplacian)  
-- OS Geometry generates OSG2ADV  
+*Interpretation*  
+$\Phi$ is not a classical coordinate chart. It is a generative rule that constructs:
+*   direction
+*   scale
+*   coordinate axes
 
-No external geometric or analytic structure is assumed.
+from the OS‑dir layer. This is the key difference between OS Geometry and classical differential geometry: coordinates are generated, not assumed.
 
 ---
 
-## 2.5. Consequences for OS Geometry
+## 2.5. The Generative Hierarchy
 
-From this generative foundation:
+The three layers form the minimal closed hierarchy:
+$$ \text{OS-atm} \xrightarrow{\text{generate}} \text{OS-dir} \xrightarrow{\Phi} \text{direction + coordinates} \xrightarrow{\text{metric generation}} g \xrightarrow{\nabla} \Gamma \xrightarrow{\Delta_{\mathrm{OS}}} \text{OS-Laplacian}. $$
 
-- differentiation becomes **generated**, not assumed  
-- tensors arise from **directional composition**  
-- the metric is **vorticity-aligned**  
-- dissipation becomes **anisotropic**  
-- Navier–Stokes acquires a **geometric damping mechanism**
+This hierarchy is closed, minimal, and unique:
+*   Removing any layer breaks the structure
+*   Adding extra structure violates minimality
+*   The order is forced by generative necessity
 
-This chapter establishes the philosophical and mathematical core of OS Geometry:
-**geometry is generated, not given.**
+---
 
-The next chapter constructs the OS-metric from OS-dir.
+## 2.6. Structural Roles
+
+**OS‑atm**
+*   provides the atomic substrate
+*   carries no geometric information
+
+**OS‑dir**
+*   generates direction
+*   stores anisotropy
+*   interacts with stretching
+
+**$\Phi$**
+*   generates coordinates
+*   seeds the metric
+*   enables OS‑gradient/div/curl
+
+Together, they form the foundation of OS Geometry and enable the construction of:
+*   OS‑metric (Chapter 03)
+*   OS‑connection (Chapter 04)
+*   OS‑Laplacian (Chapter 05)
+*   OS Energy Identity (Chapter 06)
+*   OSG2ADV (Chapter 07)
+
+---
+
+## 2.7. Summary
+This chapter established:
+*   OS‑atm as the atomic generative layer
+*   OS‑dir as the directional generative layer
+*   $\Phi$ as the coordinate‑generating map
+*   the minimal generative hierarchy
+*   the structural roles of each layer
+
+These layers form the pre‑geometric engine of OS Geometry.
