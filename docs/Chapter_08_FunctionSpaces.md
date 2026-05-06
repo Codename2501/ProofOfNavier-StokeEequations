@@ -5,8 +5,7 @@
 
 ## 8.1. Purpose of This Chapter
 
-This chapter provides the **functional analytic foundation** required for  
-the rigorous study of OS Geometry and OSG2ADV.
+This chapter provides the **functional analytic foundation** required for the rigorous study of OS Geometry and OSG2ADV.
 
 The goals are:
 
@@ -25,10 +24,9 @@ The goals are:
 $$ H^s(\mathbb{R}^3) = \left\{ f : (1+|\xi|^2)^{s/2}\hat{f}(\xi)\in L^2 \right\}. $$
 
 Used for:
-
-- basic regularity of $v$ and $\omega$  
-- energy estimates  
-- embedding into $L^p$
+* basic regularity of $v$ and $\omega$  
+* energy estimates  
+* embedding into $L^p$
 
 ---
 
@@ -39,10 +37,9 @@ Defined via Littlewood–Paley blocks $\Delta_j$:
 $$ \|f\|_{B_{p,q}^s} = \left( \sum_{j\in\mathbb{Z}} (2^{js}\|\Delta_j f\|_{L^p})^q \right)^{1/q}. $$
 
 Used for:
-
-- scale-by-scale analysis  
-- commutator estimates  
-- embedding of $E(t,\lambda)$
+* scale-by-scale analysis  
+* commutator estimates  
+* embedding of $E(t,\lambda)$
 
 ---
 
@@ -51,10 +48,9 @@ Used for:
 $$ \|f\|_{M^{p,\lambda}} = \sup_{x_0,r} r^{-\lambda} \left( \int_{B(x_0,r)} |f|^p dx \right)^{1/p}. $$
 
 Used for:
-
-- embedding of **M(t,ℓ)**  
-- localization of blow-up candidates  
-- finite-point confinement
+* embedding of **$M(t,\ell)$**  
+* localization of blow-up candidates  
+* finite-point confinement
 
 ---
 
@@ -65,17 +61,16 @@ Let
 $$ f = \sum_{j\in\mathbb{Z}} \Delta_j f. $$
 
 Properties used:
-
-- Bernstein inequalities  
-- frequency localization  
-- paraproduct decomposition  
-- commutator bounds
+* Bernstein inequalities  
+* frequency localization  
+* paraproduct decomposition  
+* commutator bounds
 
 ---
 
 ## 8.3. Embedding of OS Quantities into Function Spaces
 
-### 8.3.1. Embedding of M(t,ℓ)
+### 8.3.1. Embedding of $M(t,\ell)$
 
 $$ M(t,\ell) = \sup_{x_0} \frac{1}{\ell^3} \int_{B(x_0,\ell)}|\omega|^2 dx. $$
 
@@ -85,7 +80,7 @@ $$ M(t,\ell) \sim \|\omega(t)\|_{M^{2,3}}^2. $$
 
 ---
 
-### 8.3.2. Embedding of E(t,λ)
+### 8.3.2. Embedding of $E(t,\lambda)$
 
 $$ E(t,\lambda) = \lambda^2 \int |\omega_\lambda|^2 dx. $$
 
@@ -103,7 +98,7 @@ $$ E(t,\lambda) \in B_{2,\infty}^{-1}. $$
 
 ---
 
-### 8.3.3. Embedding of S(T)
+### 8.3.3. Embedding of $S(T)$
 
 $$ S(T) = \int_0^T \sup_{x_0} \int_{B(x_0,\sqrt{T-t})} |\nabla u|^2 dx dt. $$
 
@@ -173,12 +168,11 @@ $$ \omega_\ell \in L^\infty_t B_{2,\infty}^{-1} \cap L^2_t M^{2,3}. $$
 
 This chapter established:
 
-- Sobolev / Besov / Morrey spaces  
-- LP decomposition and Bernstein inequalities  
-- Embedding of **M/E/S** into these spaces  
-- Coifman–Meyer commutator estimates  
-- Well-posedness of all OSG2ADV terms  
-- Convergence $R\to 0$ and NS $\leftrightarrow$ OSG2ADV equivalence
+* Sobolev / Besov / Morrey spaces  
+* LP decomposition and Bernstein inequalities  
+* Embedding of **M/E/S** into these spaces  
+* Coifman–Meyer commutator estimates  
+* Well-posedness of all OSG2ADV terms  
+* Convergence $R\to 0$ and NS $\leftrightarrow$ OSG2ADV equivalence
 
-This completes the analytic foundation required for  
-**Chapter 09 — Main Theorem (Global Regularity)**.
+This completes the analytic foundation required for **Chapter 09 — Main Theorem (Global Regularity)**.
