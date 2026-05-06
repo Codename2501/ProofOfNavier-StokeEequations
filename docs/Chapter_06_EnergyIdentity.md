@@ -1,147 +1,88 @@
-# Chapter 06 — Energy Identity: M/E/S  
-The Three-Stage Confinement Structure in OS Geometry
-
----
+# Chapter 06 — Energy Identity and the Three-Stage Confinement Structure
 
 ## 6.1. Introduction
+This chapter establishes the energy identity of OS Geometry and the three-stage confinement structure, based on the generative quantities:
 
-This chapter develops the **energy identity** of OS Geometry, based on the
-three generative quantities:
+*   $M(t,\ell)$ — local concentration
+*   $E(t,\lambda)$ — scale-wise enstrophy
+*   $S(T)$ — temporal accumulation
 
-- **M(t,ℓ)** — local concentration  
-- **E(t,λ)** — scale-wise enstrophy  
-- **S(T)** — temporal accumulation  
+These quantities describe how vorticity energy is distributed in space, scale, and time, and together they form a complete obstruction to finite-time blow-up in the OSG2ADV system.
 
-These quantities form the backbone of the **three-stage confinement structure**,  
-which restricts where and how a Navier–Stokes blow-up can occur.
+## 6.2. OS Energy Quantities
 
----
+**Definition 6.1 (Local Concentration $M(t,\ell)$)**
+$$M(t,\ell) = \sup_{x_0 \in \mathbb{R}^3} \frac{1}{\ell^3} \int_{B(x_0,\ell)} |\omega(t,x)|^2 \, dx.$$
 
-## 6.2. Definition of the OS Energy Quantities
+*Interpretation.*  
+Measures the maximal vorticity concentration in a ball of radius $\ell$. This is the first-stage indicator of potential singularity formation.
 
-### 6.2.1. Local Concentration M(t,ℓ)
+**Definition 6.2 (Scale Energy $E(t,\lambda)$)**
+$$E(t,\lambda) = \lambda^2 \int_{\mathbb{R}^3} |\omega_\lambda(t,x)|^2 \, dx.$$
 
-$$ M(t,\ell) = \sup_{x_0\in\mathbb{R}^3} \frac{1}{\ell^3} \int_{B(x_0,\ell)} |\omega(t,x)|^2\,dx. $$
+*Interpretation.*  
+Quantifies the distribution of vorticity across scales. Detects small-scale amplification.
 
-**Interpretation.**  
-Measures how much vorticity energy is concentrated in a ball of radius ℓ.  
-The **first danger indicator**.
+**Definition 6.3 (Temporal Accumulation $S(T)$)**
+$$S(T) = \int_0^T \sup_{x_0 \in \mathbb{R}^3} \int_{B(x_0,T-t)} |\nabla u(x,t)|^2 \, dx \, dt.$$
 
----
+*Interpretation.*  
+Measures how long the system has remained in a high-energy state. Acts as a time-direction filter.
 
-### 6.2.2. Scale Energy E(t,λ)
+## 6.3. Critical Scale
 
-$$ E(t,\lambda) = \lambda^2 \int_{\mathbb{R}^3} |\omega_\lambda(t,x)|^2\,dx. $$
+**Definition 6.4 (Critical Scale $\ell_c(t)$)**
+$$\ell_c(t) = \inf \{ \ell > 0 : M(t,\ell) \ge M_c \}.$$
 
-**Interpretation.**  
-Quantifies the **distribution of vorticity across scales**.  
-Detects small-scale amplification.
+Below this scale, OS-dissipation dominates; above it, nonlinear stretching may dominate.
 
----
+## 6.4. Three-Stage Confinement Structure
+OS Geometry decomposes potential blow-up into three independent obstructions:
 
-### 6.2.3. Temporal Accumulation S(T)
+*   Local concentration — $M(t,\ell)$
+*   Scale energy — $E(t,\lambda)$
+*   Temporal accumulation — $S(T)$
 
-$$ S(T) = \int_0^T \sup_{x_0\in\mathbb{R}^3} \int_{B(x_0,\sqrt{T-t})} |\nabla u(x,t)|^2\,dx\,dt. $$
+A blow-up can occur only if all three quantities simultaneously exceed their critical thresholds at the same point, scale, and time.
 
-**Interpretation.**  
-Measures **how long** the system has remained in a high-energy state.  
-The **time-direction filter**.
+## 6.5. Three-Stage Inequalities
 
----
+**Stage 1 — Local Concentration**  
+If $M(t,\ell) < M_c$, then no singularity can occur at scale $\ell$.
 
-## 6.3. The Critical Scale ℓ₍c₎(t)
+**Stage 2 — Scale Energy**  
+If $E(t,\lambda) < E_c$, then no singularity can occur at scale $\lambda$.
 
-$$ \ell_c(t) = \inf\{\ell>0 : M(t,\ell)\ge M_c\}. $$
+**Stage 3 — Temporal Accumulation**  
+If $S(T) < S_c$, then no singularity can occur before time $T$.
 
-Below this scale, viscosity dominates;  
-above it, nonlinearity may dominate.
+## 6.6. OS Energy Identity
 
----
-
-## 6.4. The Three-Stage Confinement Structure
-
-OS Geometry classifies blow-up using:
-
-1. **M** — local concentration  
-2. **E** — scale energy  
-3. **S** — time accumulation  
-
-Together, they **completely confine** blow-up.
-
----
-
-## 6.5. The Three-Stage Inequalities
-
-### Stage 1 — Local Concentration (M)
-
-If  
-
-$$ M(t,\ell) < M_c, $$
-
-then **no blow-up can occur at scale ℓ**.
-
----
-
-### Stage 2 — Scale Energy (E)
-
-If  
-
-$$ E(t,\lambda) < E_c, $$
-
-then **no blow-up can occur at scale λ**.
-
----
-
-### Stage 3 — Temporal Accumulation (S)
-
-If  
-
-$$ S(T) < S_c, $$
-
-then **no blow-up can occur before time T**.
-
----
-
-## 6.6. The OS Energy Identity
-
-### Theorem 6.1 (OS Energy Identity)
-
+**Theorem 6.1 (OS Energy Identity)**  
 For any smooth solution of OSG2ADV,
-
-$$ \frac{d}{dt} M(t,\ell) + \frac{d}{dt} E(t,\lambda) + \frac{d}{dt} S(t) = \mathcal{D}_{\mathrm{OS}}(t) - \mathcal{N}_{\mathrm{OS}}(t), $$
-
+$$\frac{d}{dt} M(t,\ell) + \frac{d}{dt} E(t,\lambda) + \frac{d}{dt} S(t) = D_{\mathrm{OS}}(t) - N_{\mathrm{OS}}(t),$$
 where:
+*   $D_{\mathrm{OS}}$ is the OS-dissipation generated by the OS-Laplacian,
+*   $N_{\mathrm{OS}}$ is the nonlinear transfer (stretching + advection).
 
-- $\mathcal{D}_{\mathrm{OS}}$: OS-dissipation (from OS-Laplacian)  
-- $\mathcal{N}_{\mathrm{OS}}$: nonlinear transfer (stretching + advection)
-
-This identity expresses the **full energy flow** in OS Geometry.
-
----
+*Interpretation.*  
+This identity expresses the complete energy flow in OS Geometry: OS-dissipation removes energy at small scales, while nonlinear transfer redistributes energy across scales and space.
 
 ## 6.7. Confinement Principle
 
-### Theorem 6.2 (Three-Stage Confinement)
+**Theorem 6.2 (Three-Stage Confinement Principle)**  
+A finite-time blow-up at $(x^*, t^*)$ is possible only if
+$$M(t^*,\ell) \ge M_c, \quad E(t^*,\lambda) \ge E_c, \quad S(t^*) \ge S_c$$
+hold simultaneously for some $\ell, \lambda > 0$. 
 
-A finite-time blow-up is possible **only if**:
-
-$$ M(t,\ell)\ge M_c,\qquad E(t,\lambda)\ge E_c,\qquad S(t)\ge S_c $$
-
-**all hold simultaneously** at the same point, scale, and time.
-
-Otherwise, blow-up is **structurally impossible**.
-
----
+If any one of these inequalities fails, a blow-up at $(x^*, t^*)$ is structurally impossible.
 
 ## 6.8. Summary
+In this chapter we established:
+*   the OS energy quantities $M, E, S$,
+*   the critical scale $\ell_c(t)$,
+*   the three-stage inequalities,
+*   the OS energy identity,
+*   and the confinement principle.
 
-This chapter established:
-
-- Definitions of **M**, **E**, **S**  
-- The critical scale **$\ell_c(t)$**  
-- The three-stage inequalities  
-- The OS energy identity  
-- The confinement theorem  
-
-These results form the analytic backbone of OS Geometry and prepare the ground for  
-**Chapter 07: OSG2ADV**, the generative Navier–Stokes equation.
+These results form the analytic backbone of OS Geometry and prepare the ground for Chapter 07: OSG2ADV, the generative Navier–Stokes equation.
