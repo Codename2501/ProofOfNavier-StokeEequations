@@ -1,0 +1,27 @@
+WARNING:2026-05-06 20:09:44,270:jax._src.xla_bridge:881: Platform 'METAL' is experimental and not all JAX functionality may be correctly supported!
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1778065784.270975 4181543 mps_client.cc:510] WARNING: JAX Apple GPU support is experimental and not all JAX functionality is correctly supported!
+Metal device set to: Apple M3
+
+systemMemory: 16.00 GB
+maxCacheSize: 5.92 GB
+
+I0000 00:00:1778065784.291176 4181543 service.cc:145] XLA service 0x95b7f1c00 initialized for platform METAL (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1778065784.291362 4181543 service.cc:153]   StreamExecutor device (0): Metal, <undefined>
+I0000 00:00:1778065784.292572 4181543 mps_client.cc:406] Using Simple allocator.
+I0000 00:00:1778065784.292582 4181543 mps_client.cc:384] XLA backend will use up to 12712640512 bytes on device 0 for SimpleAllocator.
+>> [READY] Starting singularity test (CPU mode)...
+>> [IGNITION] OSG2ADV + OS Geometry Engine START! (JAX_PLATFORM_NAME=cpu)
+>> Initial condition: kida_pelz
+>> Grid: N = 64, dx = 0.098175, ν = 0.001, dt = 0.001
+Step 010000 | Max Vorticity (M): 2.808366
+Step 020000 | Max Vorticity (M): 2.278933
+Step 030000 | Max Vorticity (M): 2.494335
+Step 040000 | Max Vorticity (M): 12.789606
+Step 050000 | Max Vorticity (M): 17.806215
+Step 060000 | Max Vorticity (M): 17.091547
+Step 070000 | Max Vorticity (M): 17.610395
+Step 080000 | Max Vorticity (M): 8.949828
+Step 090000 | Max Vorticity (M): 5.312574
+Step 100000 | Max Vorticity (M): 5.991274
+>> Simulation finished in 1204.41 seconds.
